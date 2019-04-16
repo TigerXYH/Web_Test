@@ -6,7 +6,7 @@
 
 <ul>
     {% for topic in topics %}
-    <li>{{ topic }}</li>
+    <li><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></li>
     {% empty %}
     <li>您还未添加任何主题喔 No topics have been added yet.</li>
     {% endfor %}

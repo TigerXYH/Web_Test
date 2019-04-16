@@ -1,0 +1,20 @@
+{% extends 'learning_logs/base.html %'}
+
+{% block context %}
+
+<p>主题 Topic: {{ topic }}</p>
+
+<p>项目 Entries:</p>
+
+<ul>
+    {% for entry in entries %}
+    <li>
+        <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+        <p>{{ entry.text|linebreaks }}</p>
+    </li>
+    {% empty %}
+    <li>您还未添加任何主题喔 No topics have been added yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock context %}
