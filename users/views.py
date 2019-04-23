@@ -9,5 +9,5 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 def logout_view(request):
     """ 注销用户 """
-    lougt(request)
+    logout(request)
     return HttpResponseRedirect(reverse('learning_logs:index'))
