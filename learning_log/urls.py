@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-from django.views.generic.base import RedirectView
-from django.contrib.staticfiles.views import serve
+#from django.views.generic.base import RedirectView
+#from django.contrib.staticfiles.views import serve
 
 
 urlpatterns = [
@@ -26,8 +26,9 @@ urlpatterns = [
     path('users/', include('users.urls', namespace='users')),
     path('', include('learning_logs.urls', namespace='learning_logs')),
 
+
     # favicon.ico设置
-    path('favicon.ico', RedirectView.as_view(url='favicon.ico')),
-    path('favicon.ico', serve, {'path': 'favicon.ico'}),
+    #path('favicon.ico', RedirectView.as_view(url='favicon.ico')),
+    #path('favicon.ico', serve, {'path': 'favicon.ico'}),
 
 ]

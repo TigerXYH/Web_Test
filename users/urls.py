@@ -10,9 +10,11 @@ app_name = 'users'
 
 urlpatterns = [
     # 登录页面
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    path('login/', LoginView.as_view(template_name='users/login.html'), name='login'),
 
     # 注销
-    path('logout/', LogoutView.as_view(), name='logout'),
-    #path('logout/' views.LogoutView, name='logout'),
+    path('logout/', LogoutView.as_view(template_name='learning_logs/index.html'), name='logout'),
+
+    # 注册页面
+    path('register/', views.register, name='register'),
 ]
